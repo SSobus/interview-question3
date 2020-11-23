@@ -3,6 +3,7 @@ package com.interview.questions.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -21,8 +22,8 @@ public class Question {
     @Column(name = "message")
     private String message;
 
-    @OneToMany
-    private List<Reply> replies;
+    @OneToMany(mappedBy = "questionId")
+    private List<Reply> replies = new ArrayList<>();
 
     @Override
     public String toString() {
