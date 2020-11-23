@@ -73,7 +73,7 @@ public class QuestionController {
      * @return {@link com.interview.questions.entity.Question}
      * @throws RecordNotFoundException Could not find the question
      */
-    @PutMapping("/{questionId}/reply")
+    @PostMapping("/{questionId}/reply")
     public ResponseEntity<Reply> createReply(@PathVariable Long questionId, @RequestBody CreateReplyRequest createReplyRequest) throws RecordNotFoundException {
         Reply created = replyService.createReply(questionId, createReplyRequest);
         return new ResponseEntity<>(created, new HttpHeaders(), HttpStatus.CREATED);
