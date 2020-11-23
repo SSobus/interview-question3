@@ -32,7 +32,7 @@ public class QuestionController {
 
     /**
      * GET - List of questions
-     * @return List of {@link com.interview.questions.entity.Question}
+     * @return List of {@link com.interview.questions.dao.FullQuestionResponse}
      */
     @GetMapping
     public ResponseEntity<List<FullQuestionResponse>> getAllQuestions() {
@@ -44,7 +44,7 @@ public class QuestionController {
     /**
      * GET - Question by its ID
      * @param id The ID of the question
-     * @return {@link com.interview.questions.entity.Question}
+     * @return {@link com.interview.questions.dao.QuestionReplyResponse}
      * @throws RecordNotFoundException Could not find question
      */
     @GetMapping("/{id}")
@@ -57,7 +57,7 @@ public class QuestionController {
 
     /**
      * POST - Create a question
-     * @param question {@link com.interview.questions.entity.Question}
+     * @param question {@link com.interview.questions.dao.FullQuestionResponse}
      * @return {@link BasicQuestionResponse}
      */
     @PostMapping
