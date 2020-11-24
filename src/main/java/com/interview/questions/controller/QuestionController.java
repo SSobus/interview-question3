@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+/**
+ * Questions Controller
+ */
 @Controller
 @RequestMapping("/questions")
 public class QuestionController {
@@ -25,6 +28,11 @@ public class QuestionController {
     QuestionService questionService;
     ReplyService replyService;
 
+    /**
+     * Contructor for Question Controller
+     * @param questionService Autowired {@link com.interview.questions.service.QuestionService}
+     * @param replyService Autowired {@link com.interview.questions.service.ReplyService}
+     */
     public QuestionController(QuestionService questionService, ReplyService replyService) {
         this.questionService = questionService;
         this.replyService = replyService;
@@ -67,9 +75,9 @@ public class QuestionController {
     }
 
     /**
-     * Create a reply to a question
+     * POST - Create a reply to a question
      * @param questionId Long
-     * @param reply {@link com.interview.questions.dao.CreateReplyRequest}
+     * @param createReplyRequest {@link com.interview.questions.dao.CreateReplyRequest}
      * @return {@link com.interview.questions.entity.Question}
      * @throws RecordNotFoundException Could not find the question
      */

@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Basic question response
+ */
 @Data
 @NoArgsConstructor
 public class BasicQuestionResponse {
@@ -13,6 +16,10 @@ public class BasicQuestionResponse {
     private String author;
     private String message;
 
+    /**
+     * Response with basic question information
+     * @param question {@link com.interview.questions.entity.Question}
+     */
     public BasicQuestionResponse(Question question){
         id = question.getId();
         author = question.getAuthor();

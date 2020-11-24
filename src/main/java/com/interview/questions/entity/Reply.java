@@ -3,7 +3,11 @@ package com.interview.questions.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
+/**
+ * Reply Entity
+ */
 @Data
 @Entity
 @Table(name = "TBL_REPLIES")
@@ -17,8 +21,10 @@ public class Reply {
     private Long questionId;
 
     @Column(name = "author")
+    @NotBlank
     private String author;
 
     @Column(name = "message")
+    @NotBlank
     private String message;
 }
