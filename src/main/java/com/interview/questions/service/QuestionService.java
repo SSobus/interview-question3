@@ -1,6 +1,5 @@
 package com.interview.questions.service;
 
-import com.interview.questions.dao.BasicQuestionResponse;
 import com.interview.questions.dao.FullQuestionResponse;
 import com.interview.questions.dao.QuestionReplyResponse;
 import com.interview.questions.entity.Question;
@@ -8,7 +7,6 @@ import com.interview.questions.exception.RecordNotFoundException;
 import com.interview.questions.repository.QuestionRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,12 +34,7 @@ public class QuestionService {
      */
     public List<FullQuestionResponse> getAllQuestions() {
         List<FullQuestionResponse> questionsList = repository.findAll().stream().map(FullQuestionResponse::new).collect(toList());
-
-//        if (questionsList.size() > 0) {
-            return questionsList;
-//        } else {
-//            return new ArrayList<>();
-//        }
+        return questionsList;
     }
 
     /**
