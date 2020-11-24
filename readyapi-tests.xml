@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d8f2adff-ae76-45db-a834-68bf1e863684" created="3.5.0" activeEnvironment="Default environment" name="Interview Questions Assessment" updated="3.5.0 2020-11-11T18:12:01Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="a9299e0d-512e-411c-b3bf-5e3987313269" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:5000" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Reply" path="/questions/{id}/reply" id="47c8b926-1e28-43f4-8c34-88a333b90496">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:style>TEMPLATE</con:style>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Reply" id="9f30a768-b8d5-4c0c-9c61-dc47890fcf82" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500 400 404 405</con:status>
+          <con:params/>
+          <con:element xmlns:rep="http://localhost/questions/1/reply">rep:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>201 200</con:status>
+          <con:params/>
+          <con:element xmlns:loc="http://localhost/">loc:Response</con:element>
+        </con:representation>
+        <con:request name="ReplyToQuestion" id="9bc685f4-6c39-4539-a6dc-b9379e01b82f" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:5000</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="b7da011c-4b64-4c1f-a415-fe1d213594ce" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:5000 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+    </con:endpoints>
+    <con:resource name="1" path="/questions/{id}" id="795898f4-e9fb-448a-9faa-4d6cb98f8efc">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>1</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>1</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="1" id="63e80e03-942a-426b-9ca5-b152ee014715" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/questions/1">ns:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/questions/-1">ns:Fault</con:element>
+        </con:representation>
+        <con:request name="GetQuestionById" id="5c679351-6c7d-4670-816f-81f71d60fc58" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:5000</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="c88fbcc7-8eab-40ac-9307-704d865afb3b" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:5000 2" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Questions" path="/questions" id="db7bacb8-7d5b-4d21-8418-5a186c056cbc">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Questions" id="cf2bf8c0-e2df-40b1-8e04-b4fa423fcd15" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:ques="http://localhost/questions">ques:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:rep="http://localhost/questions/1/reply">rep:Fault</con:element>
+        </con:representation>
+        <con:request name="CreateQuestion" id="f88465cd-b00c-4c2b-8ae7-e1aa623d7ae0" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:5000</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="070d283f-f9dc-44dd-b8d8-ac17a04e2a2a" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:5000 3" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:5000</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Questions" path="/questions" id="7ffa852f-5463-414d-8071-13ccdfd42539">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Questions" id="aed88b07-cc6e-4af0-9c40-d0f5dba60b32" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="ListAllQuestions" id="7b572ead-6d55-428a-9e3b-327998f38294" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:5000</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="439dd6a0-9c16-453b-9cfd-954836d47f36" name="Create Questions Tests">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="37056e8d-1b58-4c12-800a-227f690d3c3a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Happy Path" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="38233708-bf22-413f-b588-f154b9a5f408">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" resourcePath="/questions" methodName="Questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="f88465cd-b00c-4c2b-8ae7-e1aa623d7ae0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"Shane",
+	"message":"Test"
+}</con:request>
+            <con:originalUri>http://localhost/questions</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="503d892b-8654-4a3e-ba92-adbc96fef108" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="57f61e58-5a09-4653-8f27-767563a4705a" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="c88d549e-e668-492b-b0fb-0b2ab86cbacd" name="JSONPath Match">
+              <con:configuration>
+                <path>$['author']</path>
+                <content>${REST Request#Request#$['author']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="88942c0d-8261-498a-9088-df75927bd282" name="JSONPath Match 2">
+              <con:configuration>
+                <path>$['message']</path>
+                <content>${REST Request#Request#$['message']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>author</con:name>
+          <con:value>Author45426</con:value>
+        </con:property>
+        <con:property>
+          <con:name>message</con:name>
+          <con:value>Message5859</con:value>
+        </con:property>
+        <con:property>
+          <con:name>reply</con:name>
+          <con:value>Reply43624</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="96d48c22-c93b-49b6-8464-e175c22f89ba" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Blank and null values" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Blank Author" id="19399037-cc39-494e-996e-5c4702a4d881">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" methodName="Questions" resourcePath="/questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Blank Author" id="fcdf645e-dce4-4a2c-9519-84f769243d39" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"",
+	"message":"Test"
+}</con:request>
+            <con:originalUri>http://localhost/questions/1/reply</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b42f1ef1-76e8-4b3b-b6d9-0d6fbf697657" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="aa965526-9d13-44b9-b848-e16d36fdb955" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Blank Message" id="c1e5d0fe-49a6-4f34-b69a-f5daf33e26a6">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" methodName="Questions" resourcePath="/questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Blank Message" id="fcdf645e-dce4-4a2c-9519-84f769243d39" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"Shane",
+	"message":""
+}</con:request>
+            <con:originalUri>http://localhost/questions/1/reply</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b42f1ef1-76e8-4b3b-b6d9-0d6fbf697657" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="aa965526-9d13-44b9-b848-e16d36fdb955" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Null Author" id="043364fe-576e-427f-83f4-5b0a85e1a164">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" methodName="Questions" resourcePath="/questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Null Author" id="fcdf645e-dce4-4a2c-9519-84f769243d39" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"message":"Test"
+}</con:request>
+            <con:originalUri>http://localhost/questions/1/reply</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b42f1ef1-76e8-4b3b-b6d9-0d6fbf697657" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="aa965526-9d13-44b9-b848-e16d36fdb955" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Null Message" id="059974ca-3b43-4ed3-aebf-2c1254378d3c">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" methodName="Questions" resourcePath="/questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Null Message" id="fcdf645e-dce4-4a2c-9519-84f769243d39" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"Shane"
+}</con:request>
+            <con:originalUri>http://localhost/questions/1/reply</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b42f1ef1-76e8-4b3b-b6d9-0d6fbf697657" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="aa965526-9d13-44b9-b848-e16d36fdb955" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="a5388039-ff91-413d-be87-d05d9ac2f8c5" name="Create and Get Question">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="8d0ecc65-37e2-42cc-8ce5-4b2ff8ebf8b6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Retrieve Question" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Create Question" id="c784c1d3-a214-435e-9e7a-e5b8e32ac3e4">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" resourcePath="/questions" methodName="Questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Create Question" id="f88465cd-b00c-4c2b-8ae7-e1aa623d7ae0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"Shane",
+	"message":"Retrive This Question"
+}</con:request>
+            <con:originalUri>http://localhost/questions</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="5e43b11d-c4f7-4ab3-9aa2-fad76fa0794c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="cd52c6f8-f656-4367-bc90-2d1daf69a368" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Get Question By Returned ID" id="2583a216-26f2-4ca3-ab49-9ae9490c6986">
+        <con:settings/>
+        <con:config service="http://localhost:5000 1" resourcePath="/questions/{id}" methodName="1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Question By Returned ID" id="5c679351-6c7d-4670-816f-81f71d60fc58" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/questions/1</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a1cab954-eba1-465e-9343-42854e2f49d6" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="58a8ecfa-4b30-4ab1-b711-4f7404f8d9e7" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="${Create Question#Response#$['id']}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Fail Missing ID" id="5e9f58b9-def8-46eb-aeb6-bf5499510eb7">
+        <con:settings/>
+        <con:config service="http://localhost:5000 1" resourcePath="/questions/{id}" methodName="1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Fail Missing ID" id="5c679351-6c7d-4670-816f-81f71d60fc58" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/questions/-1</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="29749f8a-b943-464b-b16d-01b402a58325" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>500</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="2952672d-e5ad-45d9-a99c-d723453c5a61" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="-1"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="e2aa15f9-95f1-4c73-a682-831a42e186df" name="Get All Questions">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="de06fcfc-9753-4669-895d-7f39cdf01a05" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Retrieve All Questions" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Create Question" id="f730683b-49bd-4520-8f80-c9efb70ae48f">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" resourcePath="/questions" methodName="Questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Create Question" id="f88465cd-b00c-4c2b-8ae7-e1aa623d7ae0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"Shane",
+	"message":"Test3"
+}</con:request>
+            <con:originalUri>http://localhost/questions</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="629c0ebb-0789-41b1-814d-c6f0d4575a3d" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="757bfce7-4b85-4eeb-b9cf-46b401481bb1" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Create Question2" id="a6adb035-2306-4ad4-9075-c0c3b2fbfe7f">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" resourcePath="/questions" methodName="Questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Create Question2" id="f88465cd-b00c-4c2b-8ae7-e1aa623d7ae0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"Shane",
+	"message":"Test3"
+}</con:request>
+            <con:originalUri>http://localhost/questions</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="629c0ebb-0789-41b1-814d-c6f0d4575a3d" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="757bfce7-4b85-4eeb-b9cf-46b401481bb1" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Get All" id="deda7b45-f836-4b7c-a0b0-7a57f44d5a92">
+        <con:settings/>
+        <con:config service="http://localhost:5000 3" resourcePath="/questions" methodName="Questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get All" id="7b572ead-6d55-428a-9e3b-327998f38294" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/questions</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d64999c0-a4ca-4339-9562-5e1b6f879eaa" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="a4e11c38-ab98-40c2-b67d-5d7c8260c8b8" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="987dc383-fd2a-4072-98d7-f82de5c0d7a4" name="JSONPath Count">
+              <con:configuration>
+                <path>$[0]['message']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="3e8fac1b-701f-45a6-a4a8-51bc78d1fb98" name="Create Replies">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="ad169634-d5c1-4746-af0e-fe94b4dd3f7a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Create Reply" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Create Question" id="91c4e5ff-ee98-49b6-8a74-f49ea3580b31">
+        <con:settings/>
+        <con:config service="http://localhost:5000 2" resourcePath="/questions" methodName="Questions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Create Question" id="f88465cd-b00c-4c2b-8ae7-e1aa623d7ae0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"Shane",
+	"message":"Test4"
+}</con:request>
+            <con:originalUri>http://localhost/questions</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="84fb1e20-eead-4df5-8698-5a3da6bd90c2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="5b91ebaa-570b-437c-93e2-5932f5de73e4" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Create Reply" id="da834b13-aed2-456b-bcd9-7308a3749746">
+        <con:settings/>
+        <con:config service="http://localhost:5000" methodName="Reply" resourcePath="/questions/{id}/reply" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Create Reply" id="5d53152f-0449-4209-9f57-36a0991b1a5f" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request>{
+	"author":"Shane",
+	"message":"Reply"
+}</con:request>
+            <con:originalUri>http://localhost/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c756a6b1-1ee3-45ad-aefb-e59744fc46b0" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="6dfaf263-6a49-4a87-a01f-44f8c6c715af" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="${Create Question#Response#$['id']}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Get Question and Replies" id="2a6d2712-809e-48a2-b4ac-2614e397cd5a">
+        <con:settings/>
+        <con:config service="http://localhost:5000 1" methodName="1" resourcePath="/questions/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Question and Replies" id="cd99ec31-ea39-4882-a51b-2c1ae040c2d5" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:5000</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/questions/reply</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1e77617a-7e41-4e27-bb84-d8a87261b5f7" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="aaae9e3b-434a-4bb9-bcc7-ed9d4ca39b39" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="c4e3398b-7233-4f4e-9508-101a3768b463" name="JSONPath Count">
+              <con:configuration>
+                <path>$['replies']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="${Create Question#Response#$['id']}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
