@@ -3,12 +3,11 @@ Interview question
 
 
 This is a very basic spring-boot app. Run it (using `mvn spring-boot:run`) or your favorite IDE.
-Try the url `http://localhost:5000/greeting?name=David`, it should return the string: "Hello David".
+It uses an in memory database (H2).
 
-You should use this template to develop a forum system.
+Javadoc can be found in the root folder.
 
-# Requirements
-We want to develop 4 APIs:
+There are ReadyApi integration tests located on the root folder as readyapi-tests.xml
 
 ### Post new question: `http://localhost:5000/questions`
 with body:
@@ -78,18 +77,3 @@ The response should look like:
 ]
 ```
 
-## Guidelines
-* Fork this repository and push your commits
-* Use the spring-boot template given
-* Write unit-tests, integration-tests 
-  * Write in javadocs what scenarios are in test
-  * Higher coverage is better
-* Write code documentation
-* All classes given are meant to used as reference - once they are not needed, they can be removed.
-* This project uses [lombok](https://projectlombok.org/) - use it when possible
-* Properly organize your project with `.gitignore` file, `readme` file explaining how to run the project, etc.
-
-## Deliverables
-* Send us a link to a repository fulfilling the requirements.
-* Your code will be tested using different tests.
-* Successful implementation will move to interview.

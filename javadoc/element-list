@@ -1,0 +1,7 @@
+com.interview.questions
+com.interview.questions.controller
+com.interview.questions.dao
+com.interview.questions.entity
+com.interview.questions.exception
+com.interview.questions.repository
+com.interview.questions.service
